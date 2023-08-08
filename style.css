@@ -180,6 +180,8 @@ img[src*="Thumbnail"]{
 }
 
 .minibar{
+    position: sticky;
+    top: 0px;
     display: none;
     width: 100px;
     grid-template-rows: repeat(5,70px);
@@ -200,44 +202,13 @@ img[src*="Thumbnail"]{
 }
 
 @media (max-width:1000px){
-    .sidebar{
-        display: none;
-    }
     .minibar{
         display: grid;
-        position: sticky;
-        top: 0px;
     }
-    #extras{
+    #extras,.recoms,.sidebar{
         display: none;
     }
     .searchbar{
         grid-template-columns: 100%;
-    }
-    .recoms{
-        display: none;
-    }
-    .content{
-        flex-direction: column;
-    }
-    .content>div{
-        width: fit-content;
-    }
-    img[src*="Thumbnail"]{
-        height: 450px;
-    }
-    .desc{
-        width: 760px;
-        font-size: 40px;
-    }
-    .channel{
-        height: 100px;
-    }
-    .desc span{
-        font-size: 20px;
-    }
-    #special{
-        width: 760px;
-        font-size: 40px;
     }
 }
