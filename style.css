@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+}
+
+.main{
+    width: 100%;
+}
+
+.logo > img{
+    padding: 20px 5px 5px 10px;
+    height: 30%;
+}
+
+.sidebar{
+    position: sticky;
+    top: 0px;
+    height: 100vh;
+    width: 19%;
+    background-color: hsl(0, 0%, 80%);
+    overflow-x: scroll;
+    display: grid;
+    grid-template-rows: 70px repeat(17,50px);
+}
+
+.sidebar::-webkit-scrollbar{
+    display: none;
+}
+
+.sidebar > span{
+    cursor: pointer;
+    text-indent: 20px;
+    white-space: nowrap;
+}
+
+span > img{
+    height: 60%;
+    padding-right: 10px;
+    position: relative;
+    top: 10px;
+}
+
+.sidebar > span:hover{
+    background-color: hsl(0, 0%, 40%);
+}
+
+.sidebar p{
+    text-indent: 20px;
+    padding: 10px;
+}
+
+.searchbar{
+    display: grid;
+    padding-top: 10px;
+    grid-template-columns: 3fr 1.5fr;
+    grid-template-rows: auto auto;
+    grid-template-rows: 35px;
+    row-gap: 20px;
+}
+
+#search{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+.searchbar img{
+    height: 90%;
+}
+
+input{
+    width: 50%;
+    border-width: 2px;
+}
+
+#searchbutton{
+    background-color: gray;
+    width: 50px;
+    text-align: center;
+}
+
+#extras{
+    justify-self: flex-end;
+}
+
+#extras img{
+    padding: 0px 10px;
+}
+
+.searchbar img{
+    cursor: pointer;
+}
+
+.recoms{
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    overflow: scroll;
+    grid-column: span 2;
+    display: flex;
+    height: 70px;
+    align-items: center;
+}
+
+.recoms::-webkit-scrollbar{
+    display: none;
+}
+
+.recoms p{
+    margin: 0px 10px;
+    white-space: nowrap;
+    font-size: 15px;
+    border-radius: 20px;
+    background-color: gray;
+    padding: 10px;
+    margin: 0px 10px;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.recoms p:hover{
+    cursor: pointer;
+    background-color: hsl(0, 0%, 40%);
+}
+
+.content>div{
+    padding: 20px;
+    width: 279px;
+}
+
+img[src*="Thumbnail"]{
+    height: 160px;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.channel{
+    height: 30px;
+}
+
+.info{
+    display: flex;
+    padding-top: 10px;
+}
+
+.desc{
+    width: 212px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+#special{
+    width: 242px;
+    font-size: 14px;
+    padding-left: 0;
+}
+
+.desc span{
+    padding-top: 10px;
+    font-size: 12px;
+    color: gray;
+}
+
+.desc img{
+    position: relative;
+    top: 1px;
+    height: 10px;
+}
+
+.content > div:hover{
+    cursor: pointer;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.minibar{
+    display: none;
+    width: 100px;
+    grid-template-rows: repeat(5,70px);
+    text-align: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 70%);
+    font-size: 13px;
+}
+
+.minibar div:hover{
+    background-color: hsl(0, 0%, 40%);
+    cursor: pointer;
+}
+
+.minibar img{
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width:1000px){
+    .sidebar{
+        display: none;
+    }
+    .minibar{
+        display: grid;
+        position: sticky;
+        top: 0px;
+    }
+    #extras{
+        display: none;
+    }
+    .searchbar{
+        grid-template-columns: 100%;
+    }
+    .recoms{
+        display: none;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .content>div{
+        width: fit-content;
+    }
+    img[src*="Thumbnail"]{
+        height: 450px;
+    }
+    .desc{
+        width: 760px;
+        font-size: 40px;
+    }
+    .channel{
+        height: 100px;
+    }
+    .desc span{
+        font-size: 20px;
+    }
+    #special{
+        width: 760px;
+        font-size: 40px;
+    }
+}
